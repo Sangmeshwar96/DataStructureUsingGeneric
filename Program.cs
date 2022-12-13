@@ -1,21 +1,22 @@
 ﻿using System;
 
+
 namespace StackQueueDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
+    
+            StackClass<int> stackClass = new StackClass<int>();
+            stackClass.Push(70);
+            stackClass.Push(30);
+            stackClass.Push(56);
+      
+            stackClass.Display();
 
-            QueueClass<int> queueClass = new QueueClass<int>();
-            queueClass.Enqueue(56);
-            queueClass.Enqueue(30);
-            queueClass.Enqueue(70);
-          
-            queueClass.Display();
-            queueClass.DeQueueAll();
-            queueClass.Display();
-
+            stackClass.PopAll();
+            stackClass.Display();
 
         }
     }
